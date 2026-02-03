@@ -1,119 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Us 🤍</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Us 🤍</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    
-    }
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff0f5;
+    color: #333;
+  }
 
-    h1 {
-      color: #ff4d8d;
-      font-size: 36px;
-    }
+  .slide {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
 
-    p {
-      font-size: 18px;
-      line-height: 1.7;
-      max-width: 600px;
-    }
+  h1 {
+    color: #ff4d8d;
+    font-size: 38px;
+  }
 
-    .hint {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #888;
-    }
-  </style>
+  p {
+    font-size: 18px;
+    line-height: 1.9;
+    max-width: 650px;
+  }
+
+  .hint {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #888;
+  }
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 25px;
+  }
+
+  .photo-grid img {
+    width: 100%;
+    border-radius: 16px;
+  }
+</style>
 </head>
 
 <body>
 
-  <!-- Slide 1 -->
-  <section class="slide">
-    <div>
-      <h1>Us 🤍</h1>
-      <p>
-        This isn’t a big thing.  
-        It’s just a small space for something that matters to me.
-      </p>
-      <div class="hint">Scroll ↓</div>
+<!-- Slide 1 -->
+<section class="slide">
+  <div>
+    <h1>Us 🤍</h1>
+    <p>
+      This isn’t something big or fancy.<br>
+      It’s just a small space for something that means a lot to me.
+    </p>
+    <div class="hint">Scroll ↓</div>
+  </div>
+</section>
+
+<!-- Slide 2 -->
+<section class="slide">
+  <div>
+    <p>
+      Some connections don’t need noise.<br>
+      They just feel right, quietly.
+    </p>
+  </div>
+</section>
+
+<!-- Slide 3: Photos -->
+<section class="slide">
+  <div>
+    <p>Some moments I hold close 🤍</p>
+
+    <div class="photo-grid">
+      <img src="images/pic1.jpeg">
+      <img src="images/pic2.jpeg">
+      <img src="images/pic3.jpeg">
+      <img src="images/pic4.jpeg">
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Slide 2 -->
-  <section class="slide">
-    <div>
-      <p>
-        Some connections don’t need noise.  
-        They just feel right, quietly.
-      </p>
-    </div>
-  </section>
+<!-- Slide 4: Letter -->
+<section class="slide">
+  <div>
+    <p>
+      <strong>Ritika,</strong><br><br>
 
-  <!-- Slide 3 -->
-  <section class="slide">
-    <div>
-      <p>
-        This page is just… us.
-      </p>
-    </div>
-  </section>
-  <!-- Slide: Our Moments -->
-  <section class="slide">
-    <div>
-      <p>Some moments I hold close 🤍</p>
+      I don’t know how to put everything into perfect words,<br>
+      but I know how you make me feel.<br><br>
 
-      <div style="
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-        margin-top: 25px;
-      ">
-        <img src="images/pic1.jpeg" style="width:100%; border-radius:16px;">
-        <img src="images/pic2.jpeg" style="width:100%; border-radius:16px;">
-        <img src="images/pic3.jpeg" style="width:100%; border-radius:16px;">
-        <img src="images/pic4.jpeg" style="width:100%; border-radius:16px;">
-      </div>
-    </div>
-  </section>
-<script>
-  const slides = document.querySelectorAll('.slide');
+      You matter to me more than you realise.<br>
+      In the quiet moments, in the chaos,<br>
+      in ways that don’t need explaining.<br><br>
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  }, { threshold: 0.2 });
+      I love you sooo muchhh my babyy,<br>
+      soo much my gunguniii,<br>
+      you’re everything to me mwahhhh 💋
+    </p>
+  </div>
+</section>
 
-  slides.forEach(slide => observer.observe(slide));
-</script>
-  <!-- Slide: Letter -->
-  <section class="slide">
-    <div>
-      <p>
-          <!-- Slide: Letter -->
-  <section class="slide">
-    <div style="max-width:650px;">
-      <p style="font-size:18px; line-height:1.9;">
-        <strong>Ritika,</strong><br><br>
-
-        I don’t know how to put everything into perfect words,<br>
-        but I know how you make me feel.<br><br>
-
-        You matter to me more than you realise.<br>
-        In the quiet moments, in the chaos,<br>
-        in ways that don’t need explaining.<br><br>
-
-        I love you sooo muchhh my babyy,<br>
-        soo much my gunguniii,<br>
-        you’re everything to me mwahhhh 💋
-      </p>
-    </div>
-  </section>
+<!-- Slide 5 -->
+<section class="slide">
+  <div>
+    <p>
+      This page is just… us.<br><br>
+      And that’s enough for me 🤍
+    </p>
+  </div>
+</section>
 
 </body>
 </html>

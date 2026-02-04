@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-  /* RESET */
   * {
     box-sizing: border-box;
   }
@@ -16,9 +15,32 @@
     font-family: "Poppins", "Segoe UI", Arial, sans-serif;
     background: linear-gradient(180deg, #fff1f7, #ffe4ef);
     color: #333;
+    overflow-x: hidden;
   }
 
-  /* SLIDE STYLE */
+  /* FLOATING HEARTS */
+  .heart {
+    position: fixed;
+    bottom: -40px;
+    color: rgba(255, 77, 141, 0.25);
+    font-size: 22px;
+    animation: floatUp linear infinite;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @keyframes floatUp {
+    from {
+      transform: translateY(0);
+      opacity: 0.2;
+    }
+    to {
+      transform: translateY(-120vh);
+      opacity: 0;
+    }
+  }
+
+  /* SLIDES */
   section {
     min-height: 100vh;
     display: flex;
@@ -26,13 +48,15 @@
     align-items: center;
     text-align: center;
     padding: 50px 20px;
-    animation: fadeUp 1.2s ease;
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 1.1s ease;
   }
 
   @keyframes fadeUp {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(18px);
     }
     to {
       opacity: 1;
@@ -59,7 +83,7 @@
     color: #888;
   }
 
-  /* PHOTO GRID */
+  /* PHOTOS */
   .photos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -80,6 +104,14 @@
 </head>
 
 <body>
+
+<!-- HEARTS -->
+<span class="heart" style="left:10%; animation-duration:10s;">💖</span>
+<span class="heart" style="left:25%; animation-duration:13s;">💗</span>
+<span class="heart" style="left:40%; animation-duration:9s;">💖</span>
+<span class="heart" style="left:55%; animation-duration:12s;">💗</span>
+<span class="heart" style="left:70%; animation-duration:11s;">💖</span>
+<span class="heart" style="left:85%; animation-duration:14s;">💗</span>
 
 <!-- Slide 1 -->
 <section>

@@ -93,6 +93,30 @@
 
 <body>
 
+<!-- PASTE STARTS HERE -->
+<audio id="bgMusic" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById("bgMusic");
+
+  function startMusic() {
+    music.volume = 0.4;
+    music.play().catch(() => {});
+    document.removeEventListener("click", startMusic);
+    document.removeEventListener("scroll", startMusic);
+    document.removeEventListener("touchstart", startMusic);
+  }
+
+  document.addEventListener("click", startMusic);
+  document.addEventListener("scroll", startMusic);
+  document.addEventListener("touchstart", startMusic);
+</script>
+<!-- PASTE ENDS HERE -->
+
+</section>
+
 <!-- FLOATING HEARTS -->
 <div class="heart" style="left:5%; animation-duration:8s;">❤️</div>
 <div class="heart" style="left:15%; animation-duration:11s;">❤️</div>
